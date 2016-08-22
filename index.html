@@ -28,11 +28,13 @@
 		</div>
 
 		<div class="dice-wrapper">
-
+			<div class="instructions-wrapper">
+				<p id="instructions"></p>
+			</div>
 			<div class="col-xs-12" id="game">
 
-				<img class="col-xs-6" id="die1d" name="die1" src="dice/d1.gif">
-				<img class="col-cs-6" name="die2" src="dice/d1.gif">
+				<img class="dice" id="die1d" name="die1" src="dice/d1.gif">
+				<img class="dice" name="die2" src="dice/d1.gif">
 
 				<input type="button" onClick="rollDice();" value="Roll the Dice!">
 
@@ -47,9 +49,9 @@
 	var userInput = prompt("The dragon is here! you must choose whether to fight or flee!", "fight or flee");
 	function choiceMade() {
 		if (userInput == "fight") {
-			alert("you must roll a 9 or higher! Otherwise you will be burnt to a krisp");
+			document.getElementById("instructions").innerHTML = "You must roll a 9 or higher! Otherwise you will be burnt to a krisp";
 		} else {
-			alert("COME BACK AND FIGHT COWARD!!");
+			document.getElementById("instructions").innerHTML = "COME BACK AND FIGHT COWARD!!";
 			document.getElementById("dragon").src = "images/coward.jpg";
 		}
 	}
@@ -70,9 +72,9 @@
 		document.images.die2.src = 'dice/d' + randomDie2 + '.gif';
 
 		if (dieTotal <= 8) {
-			alert('Your total was ' + dieTotal + '.  You fought valiantly... But you lost');
+			document.getElementById("instructions").innerHTML = 'Your total was ' + dieTotal + '.  You fought valiantly... But you lost';
 		} else {
-			alert('You rolled ' + dieTotal +', You slayed the dragon!');
+			document.getElementById("instructions").innerHTML = 'You rolled ' + dieTotal +', You slayed the dragon!';
 		}
 	}
 

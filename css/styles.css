@@ -18,8 +18,20 @@ img {
 	margin-right: auto;
 }
 
-#die1d {
-	float: right;
-	box-sizing: border-box;
+.dice-wrapper {
+	text-align: center;
 
 }
+
+.dice {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+#instructions {
+	font-size: 20px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	
+}
+
